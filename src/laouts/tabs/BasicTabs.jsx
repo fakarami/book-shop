@@ -6,7 +6,11 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Button } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import PersonIcon from '@mui/icons-material/Person';
+import PersonIcon from "@mui/icons-material/Person";
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
 
 function CustomTabPanel({ children, value, index, ...other }) {
   return (
@@ -69,16 +73,16 @@ export default function BasicTabs() {
         </Box>
 
         <CustomTabPanel value={value} index={0}>
-          Item One
+          <Home />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          Item Two
+          <Shop />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          Item Three
+          <AboutUs />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={3}>
-          Item Four
+          <ContactUs />
         </CustomTabPanel>
       </Box>
     </>
