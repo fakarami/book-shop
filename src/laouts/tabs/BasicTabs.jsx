@@ -7,10 +7,10 @@ import Box from "@mui/material/Box";
 import { Button } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonIcon from "@mui/icons-material/Person";
-import Home from "./pages/Home";
-import Shop from "./pages/Shop";
-import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs";
+import Home from "../main/pages/homePage/Home";
+import Shop from "../main/pages/shopPage/Shop";
+import AboutUs from "../main/pages/aboutUsPage/AboutUs";
+import ContactUs from "../main/pages/contactUsPage/ContactUs";
 
 function CustomTabPanel({ children, value, index, ...other }) {
   return (
