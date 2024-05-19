@@ -5,7 +5,6 @@ import "../home.scss";
 import { useSelector } from "react-redux";
 
 export default function MultiCarousel() {
-
   const books = useSelector((state) => state.shop.books);
   const responsive = {
     superLargeDesktop: {
@@ -28,14 +27,10 @@ export default function MultiCarousel() {
   return (
     <Carousel responsive={responsive}>
       {books.map((book) => (
-        <div key={book.id} className="backCarouselStyle" >
-          <img
-            src={book.picture}
-            alt={book.title}
-          />
+        <div key={book.id} className="backCarouselStyle">
+          <img src={book.picture} alt={book.title} />
         </div>
       ))}
-
     </Carousel>
   );
 }
