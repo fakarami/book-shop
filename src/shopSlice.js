@@ -62,7 +62,9 @@ export const shopSlice = createSlice({
       state.books[action.payload].count += 1;
     },
     decrement: (state, action) => {
-      state.books[action.payload].count -= 1;
+      if (state.books[action.payload].count > 0) {
+        state.books[action.payload].count -= 1;
+      }
     },
     incrementByAmount: (state, action) => {
       state.value += action.payload;
