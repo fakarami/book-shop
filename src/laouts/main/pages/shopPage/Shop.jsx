@@ -22,12 +22,11 @@ export default function Shop() {
               image={book.picture}
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography gutterBottom variant="h6" component="div">
                 {book.title}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                <Raiting />
-              </Typography>
+              <hr />
+              <Raiting />
             </CardContent>
             <CardActions>
               <Button size="large">+</Button>
