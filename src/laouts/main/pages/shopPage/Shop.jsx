@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -8,12 +8,14 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "./shop.scss";
 import Raiting from "./Raiting";
+import { decrement, increment } from "../../../../shopSlice";
 export default function Shop() {
   const books = useSelector((state) => state.shop.books);
+  const dispatch = useDispatch();
   return (
     <>
       <div className="flexCard">
-        {books.map((book) => (
+        {books.map((book,index) => (
           <Card sx={{ maxWidth: 345 }} key={book.id}>
             <CardMedia
               component="img"
@@ -29,9 +31,16 @@ export default function Shop() {
               <Raiting />
             </CardContent>
             <CardActions>
-              <Button size="large">+</Button>
+              <Button
+                onClick={() => dispatch(increment(index))}
+                size="large"
+              >
+                +
+              </Button>
               {book.count}
-              <Button size="large">-</Button>
+              <Button onClick={() => dispatch(decrement(index))} size="large">
+                -
+              </Button>
             </CardActions>
           </Card>
         ))}

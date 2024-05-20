@@ -58,11 +58,11 @@ export const shopSlice = createSlice({
   name: "shop",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    increment: (state, action) => {
+      state.books[action.payload].count += 1;
     },
-    decrement: (state) => {
-      state.value -= 1;
+    decrement: (state, action) => {
+      state.books[action.payload].count -= 1;
     },
     incrementByAmount: (state, action) => {
       state.value += action.payload;

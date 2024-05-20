@@ -7,15 +7,17 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Raiting from "../pages/shopPage/Raiting";
+import { decrement, increment } from "../../../shopSlice";
 
 export default function CartPage() {
   const books = useSelector((state) => state.shop.books);
+  const dispatch = useDispatch();
   return (
     <>
       <div className="flexCard">
-        {books.map((book) =>
+        {books.map((book, index) =>
           book.count > 0 ? (
             <Card sx={{ maxWidth: 345 }} key={book.id}>
               <CardMedia
@@ -32,9 +34,13 @@ export default function CartPage() {
                 <Raiting />
               </CardContent>
               <CardActions>
-                <Button size="large">+</Button>
+                <Button onClick={() => dispatch(increment(index))} size="large">
+                  +
+                </Button>
                 {book.count}
-                <Button size="large">-</Button>
+                <Button onClick={() => dispatch(decrement(index))} size="large">
+                  -
+                </Button>
               </CardActions>
             </Card>
           ) : (
