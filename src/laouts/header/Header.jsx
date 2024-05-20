@@ -9,6 +9,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Search, SearchIconWrapper, StyledInputBase } from "./headerStyle";
 
 export default function Header() {
+  const time = new Date();
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -40,6 +41,9 @@ export default function Header() {
                 inputProps={{ "aria-label": "search" }}
               />
             </Search>
+            <time>
+              {time.getDay()} - {time.getMonth()} - {time.getFullYear()}
+            </time>
           </Toolbar>
         </AppBar>
       </Box>
