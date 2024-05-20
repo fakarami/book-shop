@@ -7,13 +7,13 @@ import "../home.scss";
 export default function AccordionBox() {
   return (
     <div className="accordion">
-      <Accordion>
+      <Accordion defaultExpanded>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          ویژگی‌های سبک ادبیات روسی کدامند؟
+          <b>ویژگی‌های سبک ادبیات روسی کدامند؟</b>
         </AccordionSummary>
         <AccordionDetails>
           <ul>
@@ -36,7 +36,7 @@ export default function AccordionBox() {
           aria-controls="panel2-content"
           id="panel2-header"
         >
-          چرا ادبیات فرانسه مهم است؟
+          <b>چرا ادبیات فرانسه مهم است؟</b>
         </AccordionSummary>
         <AccordionDetails>
           ادبیات برای مردم فرانسه اهمیت عمیقی دارد و نقش مهمی در احساس هویت آنها
@@ -44,13 +44,13 @@ export default function AccordionBox() {
           و مقاله‌نويس‌های هر كشور ديگری جايزه نوبل ادبيات را دريافت كرده‌است.
         </AccordionDetails>
       </Accordion>
-      <Accordion defaultExpanded>
+      <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3-content"
           id="panel3-header"
         >
-          تفاوت اساسی ادبیات نمایشی با ادبیات داستانی
+          <b>تفاوت اساسی ادبیات نمایشی با ادبیات داستانی</b>
         </AccordionSummary>
         <AccordionDetails>
           تفاوت اساسی ادبیات نمایشی با ادبیات داستانی یکی از جذابترین و
@@ -72,7 +72,7 @@ export default function AccordionBox() {
           aria-controls="panel4-content"
           id="panel4-header"
         >
-          چگونه کتاب‌های آلن دوباتن را بخوانیم؟
+          <b>چگونه کتاب‌های آلن دوباتن را بخوانیم؟</b>
         </AccordionSummary>
         <AccordionDetails>
           کتاب‌های آلن دوباتن معمولا ترتیب خاصی نداشته و هر کدام از آنها به
@@ -93,7 +93,7 @@ export default function AccordionBox() {
           aria-controls="panel5-content"
           id="panel5-header"
         >
-          ادبیات چگونه بر انقلاب فرانسه تأثیر گذاشت؟
+          <b>ادبیات چگونه بر انقلاب فرانسه تأثیر گذاشت؟</b>
         </AccordionSummary>
         <AccordionDetails>
           فلسفه جدید حقوق همه انسانها هم در سیاست و هم در ادبیات بیان شد. این به
