@@ -12,8 +12,8 @@ export default function Header() {
   const time = new Date();
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+      <Box sx={{ flexGrow: 1 }} >
+        <AppBar position="static" style={{ backgroundColor:"#11123b"}}>
           <Toolbar>
             <IconButton
               size="large"
