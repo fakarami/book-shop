@@ -1,0 +1,29 @@
+footer {
+  background-color: #11123b;
+  width: 100%;
+}
+.moshtari {
+  display: flex;
+  list-style: none;
+  b {
+    background-color: #11123b;
+    color: aliceblue;
+    padding: 5px;
+    cursor: pointer;
+  }
+  ul {
+    list-style: none;
+    margin: 5px;
+    li {
+      margin: 15px;
+      color: aliceblue;
+      cursor: pointer;
+    }
+  }
+}
+.divIcon {
+  text-align: end;
+}
+.icon {
+  color: aliceblue;
+}
