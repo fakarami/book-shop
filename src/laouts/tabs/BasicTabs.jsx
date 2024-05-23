@@ -12,7 +12,17 @@ import PersonIcon from "@mui/icons-material/Person";
 import CartPage from "../main/personal menu/CartPage";
 import LoginPage from "../main/personal menu/LoginPage";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-
+import Badge from "@mui/material/Badge";
+import { styled } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: "0 4px",
+  },
+}));
 function CustomTabPanel({ children, value, index, ...other }) {
   return (
     <div
@@ -69,7 +79,16 @@ export default function BasicTabs() {
               {...a11yProps(4)}
               style={{ marginRight: "auto" }}
             />
-            <Tab label={<ShoppingCartIcon />} {...a11yProps(5)} />
+            <Tab
+              label={
+                <IconButton aria-label="cart">
+                  <StyledBadge badgeContent={5} color="secondary">
+                    <ShoppingCartIcon />
+                  </StyledBadge>
+                </IconButton>
+              }
+              {...a11yProps(5)}
+            />
           </Tabs>
         </Box>
 
